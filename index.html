@@ -91,7 +91,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					<li><a href="#"><i class="icon-facebook2"></i></a></li>
 					<li><a href="#"><i class="icon-twitter2"></i></a></li>
 					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/madhuker-reddy-badala-820017138/" target="_blank"><i class="icon-linkedin2"></i></a></li>
+					<li><a href="" target="_blank"><i class="icon-linkedin2"></i></a></li>
 				</ul>
 			</div>
 
@@ -102,7 +102,36 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				
 				<div style="height: 100%; width: 100%; margin-top: 40px; margin-left: 40px;">
 			
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/427BJfL1lAw?si=-XDEenr1V-n4qOjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe id="random-video" width="560" height="315" src="https://www.youtube.com/embed/427BJfL1lAw?si=-XDEenr1V-n4qOjN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+					<script>
+						// Array of YouTube video IDs
+						const videoIds = [
+							'rOoscq3t3eY?si=eB-ljpMzUO78nwuG', // Video 1
+							'zE4pLxQ-Uto?si=MZ-U-d_WLRpOX1Hy', // Video 2
+							'tt_-VLHt9yk?si=GmVz6RCZFh0TyjgB', // Video 3
+							'V-_O7nl0Ii0', // Video 4
+							'tVj0ZTS4WF4'  // Video 5
+						];
+				
+						// Function to load a random YouTube video in the iframe
+						function loadRandomVideo() {
+							// Select a random video ID from the array
+							const randomIndex = Math.floor(Math.random() * videoIds.length);
+							const videoId = videoIds[randomIndex];
+				
+							// Get the iframe element by ID
+							const iframe = document.getElementById('random-video');
+				
+							// Update the iframe's src to the new video
+							iframe.src = `https://www.youtube.com/embed/${videoId}`;
+						}
+				
+						// Call the function when the page loads to display a random video
+						window.onload = loadRandomVideo;
+					</script>
+
+
 					<div>
 						<p><a class="btn btn-outline-light btn-lg px-4" href="MadhukarReddy.docx">Download CV</a></p>
 					</div>		
